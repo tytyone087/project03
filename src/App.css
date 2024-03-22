@@ -1,38 +1,153 @@
-.App {
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.mainShowcase.active .btn_stop {
+  background: url(../public/img/btn_slide_play02.png) no-repeat;
+}
+
+.mainShowcase {
+  position: relative;
+  padding-top: 140px;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.mainShowcase:after {
+  content: '';
+  background: #dddddd;
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.mainShowcase .img_wrap {
+  position: relative;
+  width: 54%;
+  padding-left: 80px;
+  float: right;
+  margin-top: -20px;
+}
+
+.mainShowcase .img_wrap .mainSwiper {
+  padding: 20px 0 80px 20px;
+  position: static;
+}
+
+.mainShowcase .img_wrap .mainSwiper:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  background: url(../public/img/main_showcase_logo.png) no-repeat;
+  animation: rotate_logo 20s linear infinite;
+  transform-origin: 50% 50%;
+  width: 123px;
+  height: 126px;
+  left: 38px;
+  top: -10px;
+  z-index: 10;
+}
+
+.mainShowcase .img_wrap .mainSwiper .swiper-slide {
+  width: auto;
+}
+
+.mainShowcase .img_wrap .mainSwiper .swiper-slide > img {
+  border-radius: 5px;
+}
+
+.mainShowcase .page_box {
+  position: absolute;
+  z-index: 5;
+  width: 940px;
+  left: 50%;
+  bottom: 80px;
+  margin-left: -470px;
+}
+
+.mainShowcase .page_box .page {
+  position: relative;
+  width: 370px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.mainShowcase .page_box .page .swiper_progress_bar {
+  position: relative;
+  width: 150px;
+  display: inline-block;
+  height: 2px;
+}
+
+.mainShowcase .page_box .page .swiper-pagination {
+  position: static;
+  width: auto;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.mainShowcase .page_box .page .swiper_btn {
+  position: absolute;
+  right: 0;
+  top: 33px;
+  width: 105px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainShowcase .page_box .page .swiper_btn .swiperNextBtn {
+  background: url(../public/img/btn_showcase_arw.png) no-repeat;
+  width: 17px;
+  height: 16px;
+  left: 10px;
+  position: absolute;
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainShowcase .page_box .page .swiper_btn .swiperPrevBtn {
+  background: url(../public/img/btn_showcase_arw.png) no-repeat;
+  width: 17px;
+  height: 16px;
+  background-position: 0 -16px;
+  right: 10px;
+  position: absolute;
+  z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.mainShowcase .page_box .page .swiper_btn .Btn-auto .btn_stop {
+  background: url(../public/img/btn_slidem_stop02.png) no-repeat;
+  width: 15px;
+  height: 17px;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+@keyframes rotate_logo {
+  100% {
     transform: rotate(360deg);
   }
 }
