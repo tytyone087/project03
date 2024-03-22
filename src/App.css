@@ -22,7 +22,7 @@ img {
 }
 
 .mainShowcase.active .btn_stop {
-  background: url(../public/img/btn_slide_play02.png) no-repeat;
+  background: url(../public/img/btn_slide_play02.png) no-repeat !important;
 }
 
 .mainShowcase {

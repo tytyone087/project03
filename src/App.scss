@@ -5,7 +5,8 @@ div{box-sizing: border-box;}
 img{max-width: 100%; vertical-align: middle;}
 
 
-.mainShowcase.active .btn_stop {background: url(../public/img/btn_slide_play02.png) no-repeat;}
+.mainShowcase.active .btn_stop {background: url(../public/img/btn_slide_play02.png) no-repeat !important; }
+
 .mainShowcase{
     position: relative;
     padding-top: 140px;
