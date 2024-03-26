@@ -13,7 +13,7 @@ img{max-width: 100%; vertical-align: middle;}
     padding-top: 140px;
     transition: all .5s;
     overflow: hidden;
-     &:after{content: ''; background: #dddddd; width: 100%; height: 160px; position: absolute;display: block; left: 0; bottom: 0; z-index: -1; } 
+     &:after{content: ''; background: #ffffff; width: 100%; height: 160px; position: absolute;display: block; left: 0; bottom: 0;  } 
     .cont{
         width: 940px;
         position: absolute;
@@ -86,12 +86,14 @@ img{max-width: 100%; vertical-align: middle;}
                 }
             }
             .swiper-pagination{
+                color: #000;
                 position: static;
                 width: auto;
                 display: inline-block;
                 font-size: 16px;
                 font-weight: 300;
                 margin-left: 10px;
+                span:first-child{font-weight: 800;}
             }
             .swiper_btn{position: absolute; right: 0; top: 33px; width: 105px; text-align: center;
                 .swiperNextBtn{background: url(../public/img/btn_showcase_arw.png) no-repeat; width: 17px; height: 16px; left: 10px; position: absolute; z-index: 10;}

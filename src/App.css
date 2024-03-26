@@ -40,14 +40,13 @@ img {
 
 .mainShowcase:after {
   content: '';
-  background: #dddddd;
+  background: #ffffff;
   width: 100%;
   height: 160px;
   position: absolute;
   display: block;
   left: 0;
   bottom: 0;
-  z-index: -1;
 }
 
 .mainShowcase .cont {
@@ -169,12 +168,17 @@ img {
 }
 
 .mainShowcase .page_box .page .swiper-pagination {
+  color: #000;
   position: static;
   width: auto;
   display: inline-block;
   font-size: 16px;
   font-weight: 300;
   margin-left: 10px;
+}
+
+.mainShowcase .page_box .page .swiper-pagination span:first-child {
+  font-weight: 800;
 }
 
 .mainShowcase .page_box .page .swiper_btn {

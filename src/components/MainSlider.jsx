@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -15,6 +15,7 @@ const MainSlider = () => {
     const [textSwiper, setTextSwiper] = useState(null); // 텍스트 슬라이드용의 Swiper 인스턴스
     const [isAutoplayPaused, setIsAutoplayPaused] = useState(false); // Track autoplay state 
     const [isActive, setIsActive] = useState(false); // Track active state for button
+    const [bgColor, setBgColor] = useState();
 
     const swiperRef = useRef(null);
 
@@ -51,7 +52,7 @@ const MainSlider = () => {
     
 
     return (
-        <div id='mainContainerPC' className={`mainShowcase ${isActive ? 'active' : ''}`} >
+        <div id='mainContainerPC' className={`mySwiper mainShowcase ${isActive ? 'active' : ''}`}  style={{ background: bgColor }}>
             
             <div className="cont">
                 
@@ -91,6 +92,12 @@ const MainSlider = () => {
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     onActiveIndexChange={(e) => setSwiperIndex(e.realIndex)}
                     onSwiper={(swiper) => { setSwiper(swiper); swiperRef.current = swiper }}
+                    onSlideChange={(e) => {
+                        const realIndex = e.realIndex;
+                        const bgColors = ['rgb(255, 238, 242)','rgb(255, 247, 227)', 'rgb(255, 242, 245)', 'rgb(248, 206, 197)', 'rgb(247, 239, 230)','rgb(240, 245, 250)','rgb(250, 249, 237)','rgb(241, 250, 240)','rgb(242, 235, 255)'];
+                        setBgColor(bgColors[realIndex]);
+                    }}
+
                     className='mainSwiper'
                 >
                     {data.map((data, i) => (

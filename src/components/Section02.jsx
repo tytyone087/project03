@@ -8,7 +8,7 @@ const Section02 = () => {
                 <span className='tag'>EVENT</span>
                 <div className="tit_wrap"></div>
                 <span className="img">
-                    <img src="" alt="" />
+                    <img src={process.env.PUBLIC_URL + "img/section02_backText.png"} alt="background-text" /> 
                 </span>
                 <div className="list">
                     <div className="menu"></div>

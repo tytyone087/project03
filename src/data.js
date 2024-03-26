@@ -4,16 +4,14 @@ let data=[
         img: './img/mainslider1.png',
         textT: '봄바람 휘날리며 떠나는 꽃캉스',
         textblod: "두근두근 설레는\n봄꽃 여행지 추천",
-        textLink: 'javascript:;',
-        color: 'rgb(255, 238,242)'
+        textLink: 'javascript:;'
     },
     {
         id: 2,
         img: './img/mainslider2.png',
         textT: '상큼한 비타민C가 톡톡🍋',
         textblod: '과일 카페에서\n즐기는 건강 충전',
-        textLink: 'javascript:;',
-        color: 'rgb(255, 247, 227)'
+        textLink: 'javascript:;'
 
     },
     {
@@ -21,8 +19,7 @@ let data=[
         img: './img/mainslider3.png',
         textT: '벛꽃 축제&명소 추천4',
         textblod: '2024 벚꽃 개화 \n 시기 총정리!',
-        textLink: 'javascript:;',
-        color: 'rgb(255, 242,245)'
+        textLink: 'javascript:;'
 
     },
     {
