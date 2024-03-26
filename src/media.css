@@ -1,0 +1,8 @@
+   
+
+@media screen and (min-width: 1023px) and (max-width: 1700px) {
+    #mainContainerPC .mainShowcase .img_wrap .swiper-slide{width: 100%;}
+    #mainContainerPC .mainShowcase .cont .textSlide .swiper-slide .tit_wrap em{height: 1.8vw ; font-size: 1.2vw ; line-height: 1.7vw;  }  
+    #mainContainerPC .mainShowcase .cont .textSlide .swiper-slide .tit_wrap strong{ margin: 2.6vw 0 1.2vw; font-size: 2.3vw; line-height: 2.7vw; letter-spacing: -0.2vw;}
+    #mainContainerPC .mainShowcase .cont .textSlide .swiper-slide .tit_wrap a{font-size: 1.2vw; letter-spacing: 0;}
+}

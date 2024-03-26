@@ -3,6 +3,7 @@ li{list-style: none;}
 *{margin: 0; padding: 0;}
 div{box-sizing: border-box;}
 img{max-width: 100%; vertical-align: middle;}
+#contents{width: 980px; margin: 0 auto; padding: 130px 20px 27px 20px;}
 
 
 .mainShowcase.active .btn_stop {background: url(../public/img/btn_slide_play02.png) no-repeat !important; }
@@ -13,6 +14,26 @@ img{max-width: 100%; vertical-align: middle;}
     transition: all .5s;
     overflow: hidden;
      &:after{content: ''; background: #dddddd; width: 100%; height: 160px; position: absolute;display: block; left: 0; bottom: 0; z-index: -1; } 
+    .cont{
+        width: 940px;
+        position: absolute;
+        left: 50%;
+        top: 140px;
+        margin-left: -470px;
+        .textSlide{
+            width: 370px;
+            margin: 0;
+            .swiper-slide{
+                width: 100%;
+                .tit_wrap{
+                    margin-top: 90px;
+                    em{font-style: normal;  display: inline-block; padding: 0 15px; height: 30px; color: #fff; background: #000; border-radius: 15px 15px 15px 0; font-size: 16px; font-weight: 200; line-height: 28px;}
+                    strong{ color: #3d3d3d; display: block; margin: 50px 0 23px; font-weight: 600; word-break: keep-all; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; letter-spacing: -3px; line-height: 50px; font-size: 44px; overflow: hidden; white-space: pre-wrap;}
+                    a{display: inline-block; font-size: 15px; font-weight: 200; letter-spacing: -.5px; color: #000; border-bottom: 1px solid #908f8f;}
+                }
+            }
+        }
+    }
     .img_wrap{
         position: relative;
         width: 54%; 
@@ -82,12 +103,34 @@ img{max-width: 100%; vertical-align: middle;}
             }
         }
         
-    }
-    
+    }  
 }
+#contents{
+    width: 100% ; padding: 0 !important;
+    .pc_main_contents{
+        .section02{
+            position: relative; word-break: keep-all; margin: 0 0 80px;
+            .bg{background: url(../public/img/section02_background.png) no-repeat 50% center rgb(242, 252, 224); position: relative; height: 415px;}
+            .cont{position: relative;
+                padding-top: 60px;
+                width: 940px;
+                margin: -415px auto 0 ;
+                .tag{}
+                .tit_wrap{}
+                .img{}
+                .list{
+                    .menu{}
+                    .banner{}
+                }
+            }
+        }
+    }
+}
+
 
 @keyframes rotate_logo{
     100% {
         transform: rotate(360deg);
     }
 }
+ 

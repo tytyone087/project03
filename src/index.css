@@ -1,6 +1,7 @@
 @font-face {
   font-family: "NotoSansKR";
   src: url("./font/NotoSansKR-Regular.ttf");
+  font-weight: 400;
 }
 
 body {

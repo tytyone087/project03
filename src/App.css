@@ -21,6 +21,12 @@ img {
   vertical-align: middle;
 }
 
+#contents {
+  width: 980px;
+  margin: 0 auto;
+  padding: 130px 20px 27px 20px;
+}
+
 .mainShowcase.active .btn_stop {
   background: url(../public/img/btn_slide_play02.png) no-repeat !important;
 }
@@ -42,6 +48,65 @@ img {
   left: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.mainShowcase .cont {
+  width: 940px;
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  margin-left: -470px;
+}
+
+.mainShowcase .cont .textSlide {
+  width: 370px;
+  margin: 0;
+}
+
+.mainShowcase .cont .textSlide .swiper-slide {
+  width: 100%;
+}
+
+.mainShowcase .cont .textSlide .swiper-slide .tit_wrap {
+  margin-top: 90px;
+}
+
+.mainShowcase .cont .textSlide .swiper-slide .tit_wrap em {
+  font-style: normal;
+  display: inline-block;
+  padding: 0 15px;
+  height: 30px;
+  color: #fff;
+  background: #000;
+  border-radius: 15px 15px 15px 0;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 28px;
+}
+
+.mainShowcase .cont .textSlide .swiper-slide .tit_wrap strong {
+  color: #3d3d3d;
+  display: block;
+  margin: 50px 0 23px;
+  font-weight: 600;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  letter-spacing: -3px;
+  line-height: 50px;
+  font-size: 44px;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+.mainShowcase .cont .textSlide .swiper-slide .tit_wrap a {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: -.5px;
+  color: #000;
+  border-bottom: 1px solid #908f8f;
 }
 
 .mainShowcase .img_wrap {
@@ -144,6 +209,30 @@ img {
   width: 15px;
   height: 17px;
   display: inline-block;
+}
+
+#contents {
+  width: 100%;
+  padding: 0 !important;
+}
+
+#contents .pc_main_contents .section02 {
+  position: relative;
+  word-break: keep-all;
+  margin: 0 0 80px;
+}
+
+#contents .pc_main_contents .section02 .bg {
+  background: url(../public/img/section02_background.png) no-repeat 50% center #f2fce0;
+  position: relative;
+  height: 415px;
+}
+
+#contents .pc_main_contents .section02 .cont {
+  position: relative;
+  padding-top: 60px;
+  width: 940px;
+  margin: -415px auto 0;
 }
 
 @keyframes rotate_logo {
