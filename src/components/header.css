@@ -60,12 +60,12 @@
   color: #333;
 }
 
-#headerGnb .gnb .menu .depth1 .menuList a.on {
+#headerGnb .gnb .menu .depth1 .menuList a.on, #headerGnb .gnb .menu .depth1 .menuList a:hover {
   color: #000;
   font-weight: bold;
 }
 
-#headerGnb .gnb .menu .depth1 .menuList a.on:after {
+#headerGnb .gnb .menu .depth1 .menuList a.on:after, #headerGnb .gnb .menu .depth1 .menuList a:hover:after {
   content: '';
   width: 5px;
   height: 5px;

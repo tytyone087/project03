@@ -1,11 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import data from '../../src/data';
-
+import data from '../data/data';
 
 
 const MainSlider = () => {
@@ -16,21 +15,30 @@ const MainSlider = () => {
     const [isAutoplayPaused, setIsAutoplayPaused] = useState(false); // Track autoplay state 
     const [isActive, setIsActive] = useState(false); // Track active state for button
     const [bgColor, setBgColor] = useState();
+    const [autoplayProgress, setAutoplayProgress] = useState(0); // Autoplay progress
 
-    const swiperRef = useRef(null);
+    const swiperRef = useRef(null);   
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (swiper && swiper.autoplay && textSwiper && textSwiper.autoplay) {
+                const progress = (swiper.autoplay.progress * 100).toFixed(2);
+                setAutoplayProgress(progress);
+            }
+        }, 1000);
+        return () => clearInterval(interval);
+    }, [swiper, textSwiper]);
+
 
     const handlePrev = () => {
         swiper?.slidePrev();
         textSwiper?.slidePrev();
     }
-
     const handleNext = () => {
         swiper?.slideNext();
         textSwiper?.slideNext();
     }
- 
 
-   
     const handleAutoplayToggle = () => {
         if (swiper && swiper.autoplay && textSwiper && textSwiper.autoplay) {
             if (swiper.autoplay.running && textSwiper.autoplay.running) {
@@ -48,14 +56,10 @@ const MainSlider = () => {
         setIsActive(!isActive);
     }; 
 
-      
     
-
     return (
-        <div id='mainContainerPC' className={`mySwiper mainShowcase ${isActive ? 'active' : ''}`}  style={{ background: bgColor }}>
-            
+        <div className={`mySwiper mainShowcase ${isActive ? 'active' : ''}`}  style={{ background: bgColor }}>
             <div className="cont">
-                
                  <Swiper
                     
                     modules={[Navigation, Pagination,  Autoplay]}
@@ -66,23 +70,19 @@ const MainSlider = () => {
                     onActiveIndexChange={(e) => setTextSwiperIndex(e.realIndex)}
                     onSwiper={(swiper) => { setTextSwiper(swiper); swiperRef.current = swiper }}
                     className='textSlide'
-                    
                     >
-                     {data.map((data, i) => (
-                        
+                     {data.map((data, i) => (                      
                         <SwiperSlide key={i}>
                             <div className="tit_wrap">
                                 <em>{data.textT}</em> 
                                  <strong>{data.textblod}</strong> 
                                 <a href={data.textLink}>자세히 보기</a>
                             </div>
-                            
                         </SwiperSlide>
                     ))}
                 </Swiper> 
             </div> 
             <div className="img_wrap">
-
                  <Swiper
                     modules={[Navigation, Pagination,  Autoplay]}
                     spaceBetween={30}
@@ -97,7 +97,6 @@ const MainSlider = () => {
                         const bgColors = ['rgb(255, 238, 242)','rgb(255, 247, 227)', 'rgb(255, 242, 245)', 'rgb(248, 206, 197)', 'rgb(247, 239, 230)','rgb(240, 245, 250)','rgb(250, 249, 237)','rgb(241, 250, 240)','rgb(242, 235, 255)'];
                         setBgColor(bgColors[realIndex]);
                     }}
-
                     className='mainSwiper'
                 >
                     {data.map((data, i) => (
@@ -108,8 +107,8 @@ const MainSlider = () => {
             <div className="page_box">
                 <div className="page">
                     <div className="swiper_progress_bar">
-                        <div className="slider_bar">
-                            <div className="fill"></div>
+                        <div className="slider_bar" >
+                            <div className="fill" style={{ width: `${autoplayProgress}%` }}></div>
                         </div>
                     </div>
                     <div className="swiper-pagination">

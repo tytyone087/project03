@@ -22,7 +22,7 @@ import './header.scss';
                 </div>
                 <nav className="menu">
                     <ul className="depth1"  onMouseOver={()=>setIsHovering(true)}  onMouseOut={() => setIsHovering(false)} >
-                        <li className="menuList"><NavLink to="/" className={({isActive}) => (isActive? 'on' : '')}>홈</ NavLink></li>
+                        <li className="menuList"><NavLink to="/" className={({isActive}) => (isActive? 'on' : '') } >홈</ NavLink></li>
                         <li className="menuList"><NavLink to="/main/theme.do" className={({isActive}) => (isActive? 'on' : '')}>테마</ NavLink></li>
                         <li className="menuList"><NavLink to="/main/area.do" className={({isActive}) => (isActive? 'on' : '')}>지역</ NavLink></li>
                         <li className="menuList"><NavLink to="/main/plan.do" className={({isActive}) => (isActive? 'on' : '')}>여행콕콕</ NavLink></li>
@@ -50,8 +50,6 @@ import './header.scss';
                                     
                                 </ul>
                            </div>
-                            
-                            
                         ):("")
                     }
                 </nav>
