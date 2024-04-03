@@ -890,6 +890,95 @@ img {
   background: url(../public/img/btn_slide_play03.png) no-repeat;
 }
 
+#contents .pc_main_contents .section06 {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 20px 27px;
+}
+
+#contents .pc_main_contents .section06 .btm_cont {
+  width: 100%;
+  margin-top: 80px;
+}
+
+#contents .pc_main_contents .section06 .btm_cont:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content {
+  background: #f4f6f8;
+  width: 100vw;
+  padding: 37px 0 50px;
+  margin-bottom: 40px;
+  margin-left: calc(-50vw + 50%);
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr {
+  width: 940px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr + .inr {
+  margin: 50px auto 0;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .tit_atc {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: -.6px;
+  color: #000;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-wrapper .swiper-slide {
+  margin-top: 30px;
+  transition: all .5s;
+  width: 220px !important;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-wrapper .swiper-slide a {
+  display: block;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-wrapper .swiper-slide a .img img {
+  border-radius: 5px;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-wrapper .swiper-slide a strong {
+  font-size: 16px;
+  margin-top: 12px;
+  line-height: 19px;
+  height: 38px;
+  letter-spacing: -.5px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-next {
+  right: -50px;
+  background: url(../public/img/btn_slide03.png) no-repeat;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-next:after {
+  content: none;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-prev {
+  background: url(../public/img/btn_slide02.png) no-repeat;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-prev:after {
+  content: none;
+}
+
 @keyframes rotate_logo {
   100% {
     transform: rotate(360deg);

@@ -12,7 +12,7 @@ const Section05 = () => {
 
     const handleAutoStopClick = () => {
         setIsActive(!isActive);
-        const swiper = swiperRef.current && swiperRef.current.swiper; // Check if swiperRef.current is not null
+        const swiper = swiperRef.current;
         if (swiper) {
             if (isActive) {
                 swiper.autoplay.stop();
@@ -43,14 +43,14 @@ const Section05 = () => {
                             <Link>
                                 <span style={{color:"#122f42"}}>여행 갈 때 뭐 입지?</span>
                                 <strong style={{color:"#3d3d3d"}}>게임으로 정하는 패션! 꾸.온.꾸</strong>
-                                <img src={process.env.PUBLIC_URL + "/img/section05_01.png"} alt="" />
+                                <img src= "/img/section05_01.png" alt="" />
                             </Link>
                         </div>
                         <div className="right" style={{backgroundColor:"#b2e7c9"}}>
                             <Link>
                                 <span style={{color:"#11542e"}}>15개 지역 명예 주민 모집!</span>
                                 <strong style={{color:"#333333"}}>디지털 관광주민증 발급 받고, 혜택 받자!</strong>
-                                <img src={process.env.PUBLIC_URL + "/img/section05_02.png"}  alt="" />
+                                <img src= "/img/section05_02.png"  alt="" />
                             </Link>
                         </div>
                     </div>
@@ -61,14 +61,14 @@ const Section05 = () => {
                             <Link>
                                 <span style={{color:"#eb552f"}}>현지인 VS 외지인</span>
                                 <strong style={{color:"#3d3d3d"}}>빅데이터가 알려주는<br /> 지역별 맛집 차트</strong>
-                                <img src={process.env.PUBLIC_URL + "/img/section05_04.png"} alt="" />
+                                <img src= "/img/section05_04.png" alt="" />
                             </Link>
                         </div>
                         <div className="right" style={{backgroundColor:"#fce3d6"}}>
                             <Link>
                                 <span style={{color:"#00473f"}}>15개 지역 명예 주민 모집!</span>
                                 <strong style={{color:"#333333"}}>디지털 관광주민증 발급 받고, 혜택 받자!</strong>
-                                <img src={process.env.PUBLIC_URL + "/img/section05_03.png"}  alt="" />
+                                <img src="/img/section05_03.png"  alt="" />
                             </Link>
                         </div>
                     </div>
