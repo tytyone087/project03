@@ -3,6 +3,8 @@ import MainSlider from '../components/MainSlider.jsx';
 import Section02 from '../components/Section02.jsx';
 import Section03 from '../components/Section03.jsx';
 import Section04 from '../components/Section04.jsx';
+import Section05 from '../components/Section05.jsx';
+import Section06 from '../components/Section06.jsx';
 
 
 const MainPage = () => {
@@ -15,6 +17,8 @@ const MainPage = () => {
                     <Section02 />
                     <Section03 />
                     <Section04 />
+                    <Section05 />
+                    <Section06 />
                 </div>
             </div>
             
