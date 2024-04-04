@@ -441,6 +441,7 @@ img{max-width: 100%; vertical-align: middle;}
                             
                         }
                         .swiper{
+                            position: static;
                             .swiper-wrapper{
                                 .swiper-slide{
                                     margin-top: 30px;
@@ -454,15 +455,37 @@ img{max-width: 100%; vertical-align: middle;}
                                     }
                                 }
                             }
-                            .swiper-button-next{
-                                right: -50px;
-                                background: url(../public/img/btn_slide03.png)no-repeat;
-                                &:after{content: none;}
+                            .swiper_btn{
+                                .Btnnext{
+                                    position: absolute; width: 30px; height: 30px; top: 186px;
+                                    right: -50px; z-index: 10;
+                                    background: url(../public/img/btn_slide03.png)no-repeat;
+                                    &:after{content: none;}
+                                }
+                                .Btnprev{
+                                    position: absolute; width: 30px; height: 30px; top: 186px; left: -50px;
+                                    z-index: 10;
+                                    background: url(../public/img/btn_slide02.png)no-repeat;
+                                    &:after{content: none;}
+                                }
+                                .swiper-button-disabled{
+                                    opacity: 0; background-position:0 -30px;
+                                }
+
                             }
-                            .swiper-button-prev{
-                                background: url(../public/img/btn_slide02.png)no-repeat;
-                                &:after{content: none;}
+                            
+                            .pagination_scrollbar{
+                                height: 2px; width: 856px; margin-top: 30px; background: #c3c5c6;  bottom: 50px;    
+                                .swiper-scrollbar-drag{ background: #000;  } 
                             }
+                            .pagination_fraction{
+                                position: absolute; right: 0; font-size: 16px; font-weight: 200; text-align: right; color: #000; bottom: -8px; width: 52px; left: auto;
+                                span{
+                                    display: inline; margin: 0 3px;
+                                    &:nth-child(1){font-weight: 800;}
+                                }
+                            }
+                            
                         }
                     }
                 }

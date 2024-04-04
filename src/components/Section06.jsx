@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
+
 const Section06 = () => {
+    const [swiperIndex, setSwiperIndex] = useState(0); // -> 페이지네이션용
+    const [swiper, setSwiper] = useState(); // -> 슬라이드용
+    
     return (
         <div className='section06'>
             <div className="btm_cont">
@@ -44,15 +49,22 @@ const Section06 = () => {
                         <Swiper
                             spaceBetween={20}
                             slidesPerView={4}
-                            pagination={{
-                                type: 'progressbar',
-                                type: 'fraction'
+                            pagination={{ 
+                                el:".pagination_fraction",
+                                type: 'fraction',
+
                             }}
                             navigation= {{
-                                prevEl: ".swiper-button-prev",
-                                nextEl: ".swiper-button-next"
+                                prevEl: ".Btnprev",
+                                nextEl: ".Btnnext"
                             }}
-                            modules={[Pagination, Navigation]}  
+                            scrollbar={{
+                                el:".pagination_scrollbar",
+                              }}
+                            modules={[Pagination, Navigation, Scrollbar]}  
+                            onActiveIndexChange={(e)=>setSwiperIndex(e.realIndex)}
+                            onSwiper={(e) => {setSwiper(e)}}
+                            className='main_swiper'
                             >
                             <SwiperSlide>
                                 <Link>
@@ -114,9 +126,17 @@ const Section06 = () => {
                                     </strong>
                                 </Link>
                             </SwiperSlide>
-                            <div className="swiper-button-prev"></div>
-                            <div className="swiper-button-next"></div>
+                            <div className="swiper_btn">
+                                <div className="Btnprev"></div>
+                                <div className="Btnnext"></div>
+                            </div>
+                            <div className="pagination_fraction"></div>
+                            <div className="pagination_scrollbar"></div>
+                            
+                            
                         </Swiper>
+                        
+                    
                     </div>
                 </div>
             </div>

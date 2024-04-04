@@ -936,6 +936,10 @@ img {
   color: #000;
 }
 
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper {
+  position: static;
+}
+
 #contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-wrapper .swiper-slide {
   margin-top: 30px;
   transition: all .5s;
@@ -962,21 +966,70 @@ img {
   display: block;
 }
 
-#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-next {
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper_btn .Btnnext {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 186px;
   right: -50px;
+  z-index: 10;
   background: url(../public/img/btn_slide03.png) no-repeat;
 }
 
-#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-next:after {
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper_btn .Btnnext:after {
   content: none;
 }
 
-#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-prev {
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper_btn .Btnprev {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 186px;
+  left: -50px;
+  z-index: 10;
   background: url(../public/img/btn_slide02.png) no-repeat;
 }
 
-#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-button-prev:after {
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper_btn .Btnprev:after {
   content: none;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper_btn .swiper-button-disabled {
+  opacity: 0;
+  background-position: 0 -30px;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .pagination_scrollbar {
+  height: 2px;
+  width: 856px;
+  margin-top: 30px;
+  background: #c3c5c6;
+  bottom: 50px;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .pagination_scrollbar .swiper-scrollbar-drag {
+  background: #000;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .pagination_fraction {
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  font-weight: 200;
+  text-align: right;
+  color: #000;
+  bottom: -8px;
+  width: 52px;
+  left: auto;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .pagination_fraction span {
+  display: inline;
+  margin: 0 3px;
+}
+
+#contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .pagination_fraction span:nth-child(1) {
+  font-weight: 800;
 }
 
 @keyframes rotate_logo {
