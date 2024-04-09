@@ -350,12 +350,30 @@ img{max-width: 100%; vertical-align: middle;}
                             }
                         }
                     }
-                    .abcList{
-                        li{
-                            a{
-                                .best{}
-                                .img_scale{}
-                                .info{}
+                    .abcList{margin-left: -20px; height: 360px;
+                        li{margin-left: 20px;
+                            a{width: 300px; height: 330px; box-shadow: 4px 7px 15px 0 rgba(51, 51, 51, 0.08) ; display: block; position: relative;
+                                overflow: hidden; background: #fff; border-radius: 5px;
+                                .best{position: absolute; background: url(../public/img/icon_curation_best.png) no-repeat; width: 42px; height: 42px; top: 15px; left: 15px; display: inline-block; z-index: 10; text-indent: -9999999px;}
+                                .img_scale{overflow: hidden;
+                                    .img_wrap{
+                                        background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; transition: all 0.7s; height: 214px;
+                                    }
+                                }
+                                .info{padding: 31px 30px 0; font-size: 14px; font-weight: 300; position: relative;
+                                    .profile{
+                                        position: absolute; right: 20px; top: 34px; display: inline-block; border-radius: 50%; height: 35px; width: 35px; overflow: hidden;
+                                        img{ object-fit: cover; width: 100%; height: 100%;}
+                                    }
+                                    em{font-style: normal; height: 30px ; width: 70px; line-height: 30px; left: 30px; top: -14px; position: absolute; background: #567ff2; color: #fff; font-size: 15px; letter-spacing: -0.5px; text-align: center;}
+                                    strong{font-weight: 400; font-size: 18px; line-height: 21px; padding-right: 25px; display: block; margin-bottom: 6px; letter-spacing: -.6px; color: #333; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+                                    .area{display: block;}
+                                    span{ display: inline-block; color: #666; height: 18px; line-height: 16px; font-size: 14px; font-weight: 300;
+                                    } 
+                                    span:last-child:before{content: ''; display: inline-block; width: 1px ; height: 12px; margin: 0 8px; vertical-align: -1px; background: #bfbfbf;
+                                    } 
+                                }
+                                &:hover .img_wrap{transform: scale(1.2);}
                             }
                         }
                     }
@@ -525,6 +543,7 @@ img{max-width: 100%; vertical-align: middle;}
                                         }
                                         strong{font-size: 16px; margin-top: 12px; line-height: 19px; height: 38px; letter-spacing: -.5px; color: #000; font-weight: 400; text-align: center; display: block;}
                                     }
+                                    &:hover{margin-top: 10px;}
                                 }
                             }
                             .swiper_btn{
