@@ -23,7 +23,7 @@ const Footer = () => {
      const handleSelect = (e) => {
        setSelected(e.target.value);
      };
-    // 스와이퍼 멈추기
+    // 스와이퍼 자동재생 관리
      const swiperRef = useRef();
      const [isActive, setIsActive] = useState(true);
  

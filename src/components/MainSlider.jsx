@@ -15,19 +15,8 @@ const MainSlider = () => {
     const [isAutoplayPaused, setIsAutoplayPaused] = useState(false); // Track autoplay state 
     const [isActive, setIsActive] = useState(false); // Track active state for button
     const [bgColor, setBgColor] = useState();
-    const [autoplayProgress, setAutoplayProgress] = useState(0); // Autoplay progress
 
     const swiperRef = useRef(null);   
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (swiper && swiper.autoplay && textSwiper && textSwiper.autoplay) {
-                const progress = (swiper.autoplay.progress * 100).toFixed(2);
-                setAutoplayProgress(progress);
-            }
-        }, 1000);
-        return () => clearInterval(interval);
-    }, [swiper, textSwiper]);
 
 
     const handlePrev = () => {
@@ -108,7 +97,7 @@ const MainSlider = () => {
                 <div className="page">
                     <div className="swiper_progress_bar">
                         <div className="slider_bar" >
-                            <div className="fill" style={{ width: `${autoplayProgress}%` }}></div>
+                            <div className="fill"></div>
                         </div>
                     </div>
                     <div className="swiper-pagination">
