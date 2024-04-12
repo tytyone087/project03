@@ -30,6 +30,7 @@
                 .paging{
                     position: absolute; top: 0; left: 361px; width: 19px; text-align: center;
                     .btn_auto{ background: url(../../public/img/btn_notice_stop.png) no-repeat; background-size: 19px 19px; display: inline-block; vertical-align: top; width: 19px; height: 19px; margin-top: 22px; border: none; cursor: pointer;}
+                    &.active .btn_auto{background: url(../../public/img/btn_notice_play.png) no-repeat; background-size: 19px 19px;} 
                 }
                 .button-prev{background: url(../../public/img/btn_notice_prev.png) no-repeat; position: absolute; cursor: pointer; width: 19px; height: 19px; background-size: 19px 19px; margin-top: -10px; top: 50%; display: inline-block; border: none; left: 337px;}
                 .button-next{background: url(../../public/img/btn_notice_next.png) no-repeat; position: absolute; cursor: pointer; width: 19px; height: 19px; background-size: 19px 19px; margin-top: -10px; top: 50%; display: inline-block; border: none; left: 385px;}
@@ -53,22 +54,70 @@
         .footer_snsList{
             display: block; clear: both; text-align: center;
             &:after{content: ''; display: block; clear: both;}
-            .tit{display: inline-block;}
-            ul{
-                li{
+            .tit{display: inline-block; font-size: 16px; font-weight: 700; line-height: 26px; background: url(../../public/img/ico_footer_sns.png) no-repeat 0 50%/25px 26px; padding-left: 33px; margin-top: 14px;}
+            ul{padding: 20px 0;
+                li{display: inline-block; margin-left: 33px;
+                    &:first-child{margin-left: 0;}
                     a{
-                      .ico{}  
-                      .sns_name{}
-                      .ico_blog{}
-                      .ico_facebook{}
-                      .ico_twitter{}
-                      .ico_kakaostory{}
-                      .ico_instargram{}
-                      .ico_naver{}
+                      .ico{display: inline-block; width: 40px; height: 40px; background-size: 40px 40px; vertical-align: middle; background-position: 0 0; background-repeat: no-repeat;}  
+                      .sns_name{font-style: normal; vertical-align: middle; font-size: 15px; line-height: 16px; margin-left: 3px ; text-align: left; color: #666; display: inline-block;}
+                      
+                      .ico_blog{background: url(../../public/img/ico_sns1.png);  }
+                      &:hover .ico_blog{background: url(../../public/img/ico_sns1_1.png);}
+                      .ico_post{background: url(../../public/img/ico_sns2.png);  }
+                      &:hover .ico_post{background: url(../../public/img/ico_sns2_1.png);  }
+                      .ico_facebook{background: url(../../public/img/ico_sns3.png) ; }
+                      &:hover .ico_facebook{background: url(../../public/img/ico_sns3_1.png) ; }
+                      .ico_twitter{background: url(../../public/img/ico_sns4.png) ; }
+                      &:hover .ico_twitter{background: url(../../public/img/ico_sns4_1.png) ; }
+                      .ico_kakaostory{background: url(../../public/img/ico_sns5.png) ; }
+                      &:hover .ico_kakaostory{background: url(../../public/img/ico_sns5_1.png) ; }
+                      .ico_instargram{background: url(../../public/img/ico_sns7.png) ; }
+                      &:hover .ico_instargram{background: url(../../public/img/ico_sns7_1.png) ; }
+                      .ico_naver{background: url(../../public/img/ico_sns9.png) ; }
+                      &:hover .ico_naver{background: url(../../public/img/ico_sns9_1.png) ; }
                     }
                 }
             }
         }
+        .footer_data{padding: 20px 0; border-top: 1px solid #e6e6e6;
+            .footer_banner{
+                display: block; float: left;
+                span{float: left;
+                    & + span{margin-left: 10px;}
+                }
+                &:after{content: ''; display: block; clear: both;}
+            }
+            .btm_menu{
+                width: 100%; padding-top: 10px; overflow: hidden;
+                li{float: left; line-height: 30px;
+                    a{font-size: 13px; color: #666; margin-right: 30px; letter-spacing: -.25px;}
+                    .peronal_info{color: #2c47dc; font-weight: 700;}
+                }
+            }
+            .ft_address{
+                padding-top: 6px;
+              li{display: inline-block; margin-right: 5px; color: #666; line-height: 1.8; font-size: 13px;
+                span{padding-right: 10px;}
+              }
+            }
+            &:after{content: ''; display: block; clear: both;}
+        }
+        .footer_PCLogo{
+            width: 100%;  border-top: 1px solid #e6e6e6;  padding-bottom: 16px; display: flex; justify-content: space-between;
+            .btn_footLogo{
+                 width: 89px;  padding-top: 23px;
+                img{width: inherit; height: 14px;}
+            }
+            .logo_List{
+                display: flex; justify-content: space-between; padding-top: 14px;
+                li{margin-left: 20px;
+                    &:nth-child(4){margin-left: 40px;}
+                    a{display: block;}
+                }
+            }
+        }
+        
     }
 
 }

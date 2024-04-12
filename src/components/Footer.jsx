@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './footer.scss'
 import 'swiper/css/navigation';
 import { Link } from 'react-router-dom';
@@ -23,12 +23,28 @@ const Footer = () => {
      const handleSelect = (e) => {
        setSelected(e.target.value);
      };
+    // 스와이퍼 멈추기
+     const swiperRef = useRef();
+     const [isActive, setIsActive] = useState(true);
+ 
 
+     const handleAutoStopClick = () => {
+         setIsActive(!isActive);
+         const swiper = swiperRef.current;
+         if (swiper) {
+             if (isActive) {
+                 swiper.autoplay.stop();
+             } else {
+                 swiper.autoplay.start();
+             }
+         }
+         
+        }
     return (
         <div id='footer'>
             <div className="area_notice">
                 <div>
-                    <div className="notice_slider">
+                    <div className="notice_slider" >
                         <Swiper
                         autoplay={{
                             delay: 2500,
@@ -42,8 +58,9 @@ const Footer = () => {
                         }}
                         direction={'vertical'}
                         slidesPerView={1}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
+                        onSwiper={(swiper) => {
+                            swiperRef.current = swiper;
+                        }}
                         >
                         <SwiperSlide>
                             <Link>[소식]K-컬처의 모든 매력을 한곳에 담다, 한국방문의 해 팝업 오픈</Link>
@@ -62,8 +79,8 @@ const Footer = () => {
                         </SwiperSlide>
 
                         </Swiper>
-                        <div className="paging">
-                            <button className='btn_auto'></button>
+                        <div className={`paging ${ isActive ? '' : 'active'}`}>
+                            <button className='btn_auto' onClick={handleAutoStopClick}></button>
                         </div>
                         <button type='button' className='button-prev'></button>
                         <button type='button' className='button-next'></button>

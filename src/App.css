@@ -1186,6 +1186,7 @@ img {
 }
 
 #contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper-wrapper .swiper-slide {
+  width: 25%;
   margin-top: 30px;
   transition: all .5s;
 }
@@ -1216,7 +1217,7 @@ img {
 
 #contents .pc_main_contents .section06 .btm_cont .content .inr .swiper .swiper_btn .Btnnext {
   position: absolute;
-  width: 30px;
+  width: 3    0px;
   height: 30px;
   top: 186px;
   right: -50px;
